@@ -34,7 +34,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2 className={inter.className}>
-            Doação! <span>-&gt;</span>
+            Doação!!<span>-&gt;</span>
           </h2>
           <p className={inter.className}>
             Ajude-nos a manter este site de pé e atualizado!
