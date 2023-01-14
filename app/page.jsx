@@ -1,5 +1,4 @@
-'use client'
-import Link from 'next/Link'
+import Link from 'next/link'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
 
