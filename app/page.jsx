@@ -1,4 +1,5 @@
-import Image from 'next/image'
+'use client'
+import Link from 'next/Link'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
 
@@ -12,20 +13,17 @@ export default function Home() {
           Transcreva os exames de um paciente com facilidade!
         </p>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Por Guilherme Gnipper
-          </a>
+          <div>Por:</div>
+          <Link href="https://www.instagram.com/guilhermecirillo/" target={'_blank'}><p>Guilherme Gnipper</p></Link>
+          <Link href="https://www.instagram.com/peusgarbi/" target={'_blank'}><p>Pedro Sgarbi</p></Link>
         </div>
       </div>
 
       <div className={styles.center}>
-        <h1>
-          LabsInCor
-        </h1>
+        <div><h1>LabsInCor</h1></div>
+      </div>
+      <div className={styles.center}>
+        <div><input type="file" accept="application/pdf" change="onChange"></input></div>
       </div>
 
       <div className={styles.grid}>
@@ -43,17 +41,17 @@ export default function Home() {
           </p>
         </a>
 
-        <a
-          href="#"
+        <Link
+          href="https://github.com/ggnipper98/labsincor"
           className={styles.card}
-          target="_self"
+          target="_blank"
           rel="noopener noreferrer"
         >
           <h2 className={inter.className}>
             GitHub <span>-&gt;</span>
           </h2>
           <p className={inter.className}>Quer nos ajudar codando?</p>
-        </a>
+        </Link>
       </div>
     </main>
   )
