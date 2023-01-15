@@ -7,7 +7,10 @@ export default async function handler(req, res) {
     const response = await Axios.get(`${process.env.API_IP}:${process.env.API_PORT}/test`);
     res.status(response.status).json(response.data);
   } catch (error) {
-    res.status(error).json(error)
+    if (!error.response) {
+      return res.status(502).json({error: 'Comunicação API falhou!'})
+    }
+    res.status(error.response.status).json({error: 'Comunicação API falhou!'})
     console.error(error);
   }
 }
